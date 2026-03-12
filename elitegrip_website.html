@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EliteGrip Webshop</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#0f172a;color:white}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#020617;position:sticky;top:0}
+.logo{font-size:28px;font-weight:700}
+nav a{color:white;margin-left:20px;text-decoration:none}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:80px 20px}
+.hero h1{font-size:48px;margin-bottom:20px}
+.hero p{max-width:700px;margin-bottom:30px;font-size:18px}
+.price{font-size:36px;font-weight:700;margin-bottom:20px}
+button{background:#ef4444;border:none;padding:15px 30px;color:white;font-size:18px;border-radius:10px;cursor:pointer}
+section{padding:60px 20px;text-align:center}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1000px;margin:auto}
+.product{background:#1e293b;padding:25px;border-radius:15px}
+.product img{width:100%;border-radius:10px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:900px;margin:auto}
+.card{background:#1e293b;padding:25px;border-radius:15px}
+.cart{position:fixed;right:20px;bottom:20px;background:#ef4444;padding:15px 20px;border-radius:10px;font-weight:bold}
+footer{padding:30px;text-align:center;background:#020617;color:#94a3b8}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">EliteGrip</div>
+<nav>
+<a href="#product">Product</a>
+<a href="#features">Voordelen</a>
+<a href="#buy">Bestellen</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>EliteGrip Antislip Sok</h1>
+<p>De eerste sportsok met ingebouwde scheenbescherming en professionele grip onder de voet. Perfect voor voetballers die meer controle, comfort en bescherming willen.</p>
+<div class="price">€19,99 voor 2 paar</div>
+<a href="#buy"><button>Koop Nu</button></a>
+</section>
+
+<section id="product">
+<h2>Ons Product</h2>
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="grip socks">
+<h3>EliteGrip Sok</h3>
+<p>2 paar antislip sokken met ingebouwde scheenbeschermers.</p>
+<p><strong>€19,99</strong></p>
+<button onclick="addToCart()">Toevoegen aan winkelwagen</button>
+</div>
+
+</div>
+</section>
+
+<section id="features">
+<h2>Waarom EliteGrip?</h2>
+<div class="features">
+<div class="card">
+<h3>Antislip Grip</h3>
+<p>Siliconen grip onder de sok voorkomt schuiven in je schoen.</p>
+</div>
+<div class="card">
+<h3>Ingebouwde Scheenbeschermers</h3>
+<p>Bescherming direct in de sok verwerkt voor extra gemak.</p>
+</div>
+<div class="card">
+<h3>Comfort & Compressie</h3>
+<p>Strakke pasvorm zodat de sok perfect blijft zitten tijdens het sporten.</p>
+</div>
+</div>
+</section>
+
+<section id="buy">
+<h2>Bestellen</h2>
+<p>Klik op de knop om het product toe te voegen aan je winkelwagen.</p>
+<button onclick="addToCart()">Bestel 2 Paar voor €19,99</button>
+</section>
+
+<div class="cart" id="cart">🛒 Winkelwagen: 0</div>
+
+<footer>
+<p>© 2026 EliteGrip Webshop</p>
+</footer>
+
+<script>
+let cartCount = 0;
+function addToCart(){
+cartCount++;
+document.getElementById("cart").innerText = "🛒 Winkelwagen: " + cartCount;
+}
+</script>
+
+</body>
+</html>
